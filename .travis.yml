@@ -1,6 +1,3 @@
 language: r
 cache: package
-install:
-  -Rscript -e 'devtools::install_deps("sayHello")'
-script:
-  -Rscript -e 'devtools::check("sayHello")'
+
