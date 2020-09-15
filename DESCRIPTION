@@ -1,0 +1,15 @@
+Package: sayHello
+Type: Package
+Title: R package for sayHello
+Version: 1.0
+Date: 2020-09-08
+Author: Chao Fu & Michael Bailey
+Maintainer: <chafu696@student.liu.se>
+Description: A package containing only two functions: the Euclidean algorithm and Dijkstra's algorithm.
+License: GPL-3
+Depends: R(>= 4.0.0)
+Encoding: UTF-8
+RoxygenNote: 7.1.1
+LazyData: true
+Suggests: 
+    testthat
