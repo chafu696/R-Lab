@@ -1,12 +1,14 @@
 Package: sayHello
 Type: Package
 Title: R package for sayHello
-Version: 1.0
-Date: 2020-09-08
-Author: CHAO FU
+Version: 1.0.0
+Date: 2020-09-15
+Author: Chao Fu and Michael Bailey
 Maintainer: <chafu696@student.liu.se>
-Description: This package provides a package demo.
+Description: This package provides two algorithms.
 License: GPL-3
 Depends: R(>= 4.0.0)
 Encoding: UTF-8
+LazyData: true
+Suggests: testthat
 RoxygenNote: 7.1.1
