@@ -26,27 +26,23 @@ dijkstra <- function(graph, init_node) {
   stopifnot(init_node %in% graph[,1], length(init_node) == 1, is.data.frame(graph), names(graph)==c("v1","v2","w"))
   Q <- c()
   distance <- c()
-  prev <- c()
   
   for (v in 1:max(graph[,1])) {
     distance[v] <- Inf
-    prev[v] <- NA
     Q <- c(Q,v)
   }
   distance[init_node] <- 0
 
   while (length(Q) != 0) {
-    u <- which(distance == min(distance[Q]))
-    Q <- Q[-which(Q == u)]
+    u <- subset(Q, Q %in% which(distance == min(distance[Q])))[1] 
+    Q <- Q[-match(u, Q)]
     
     for (v in graph[graph[,1] == u & graph[,2] %in% Q, 2]) {
       alt <- distance[u] + graph[graph[,1] == u & graph[,2] == v, 3]
       if (alt < distance[v]) {
         distance[v] <- alt
-        prev[v] <- u
       }
     }
   }
   return(distance)
-  
 }
